@@ -21,6 +21,10 @@ export class ServiceService {
     return this.serviceRepository.find({ relations: ['type'] });
   }
 
+  async findOne(id: string) {
+    return await this.serviceRepository.findOneBy({ id: id });
+  }
+
   async findByType(typeId: number) {
     const type = await this.typeService.findOne(typeId);
     return this.serviceRepository.findOne({

@@ -1,6 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
 import {
-  IsDecimal,
   IsInt,
   IsNotEmpty,
   IsString,
@@ -16,7 +15,7 @@ export class CreateServiceDto {
 
   @ApiProperty()
   @IsNotEmpty()
-  @IsDecimal()
+  // @IsDecimal()
   price: number;
 
   @ApiProperty()

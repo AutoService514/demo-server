@@ -24,7 +24,6 @@ $ npm run migration:run
 ## Enjoy <3
 
 ## Stay in touch
-
 - Author - DrunkenCat🍺
 
 ## License

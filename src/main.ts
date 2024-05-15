@@ -16,6 +16,7 @@ async function bootstrap() {
 
   // app.setGlobalPrefix('api', { exclude: ['app'] });
   app.useGlobalInterceptors(new LoggerInterceptor());
+  app.enableCors();
 
   await app.listen(5000);
 }
