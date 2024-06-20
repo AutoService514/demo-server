@@ -20,12 +20,3 @@ $ docker exec -ti <container_name> sh
     # then
 $ npm run migration:run
 ```
-
-## Enjoy <3
-
-## Stay in touch
-- Author - DrunkenCat🍺
-
-## License
-
-- Three cans of light unfiltered 🍺🍺🍺
