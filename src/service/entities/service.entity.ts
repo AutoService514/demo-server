@@ -22,6 +22,9 @@ export class ServiceEntity {
   @Column({ nullable: true })
   description: string;
 
+  @Column({ nullable: true })
+  image: string;
+
   @ManyToOne(() => TypeEntity, (type) => type.services)
   type: TypeEntity;
 

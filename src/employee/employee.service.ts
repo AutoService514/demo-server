@@ -1,4 +1,8 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { CreateEmployeeDto } from './dto/create-employee.dto';
 import { UpdateEmployeeDto } from './dto/update-employee.dto';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -32,7 +36,7 @@ export class EmployeeService {
   async remove(id: string): Promise<void> {
     const deleteResponse = await this.employeeRepository.softDelete(id);
     if (!deleteResponse.affected) {
-      throw new NotFoundException(id);
+      throw new BadRequestException(id);
     }
   }
 }

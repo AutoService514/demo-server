@@ -39,6 +39,6 @@ export class CreateEmployeeDto {
 
   @ApiProperty()
   @IsNotEmpty()
-  @IsNumber()
+  // @IsNumber()
   salary: number;
 }

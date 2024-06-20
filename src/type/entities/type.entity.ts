@@ -4,7 +4,7 @@ import { ServiceEntity } from '../../service/entities/service.entity';
 @Entity('types')
 export class TypeEntity {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: string;
 
   @Column()
   title: string;

@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsPhoneNumber, IsString } from 'class-validator';
+import { IsEmail, IsNotEmpty, IsString, Matches } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateClientDto {
@@ -9,7 +9,9 @@ export class CreateClientDto {
 
   @ApiProperty()
   @IsNotEmpty()
-  @IsPhoneNumber('UA')
+  @Matches(/^[+]?[0-9]{10,13}$/, {
+    message: 'Phone number must be a valid format',
+  })
   contactNumber: string;
 
   @ApiProperty()

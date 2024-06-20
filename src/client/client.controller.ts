@@ -5,7 +5,8 @@ import {
   Body,
   Patch,
   Param,
-  Delete, ValidationPipe,
+  Delete,
+  ValidationPipe,
 } from '@nestjs/common';
 import { ClientService } from './client.service';
 import { CreateClientDto } from './dto/create-client.dto';
@@ -39,6 +40,6 @@ export class ClientController {
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.clientService.remove(+id);
+    return this.clientService.remove(id);
   }
 }

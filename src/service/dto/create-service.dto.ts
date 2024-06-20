@@ -1,10 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import {
-  IsInt,
-  IsNotEmpty,
-  IsString,
-  MaxLength,
-} from 'class-validator';
+import { IsInt, IsNotEmpty, IsString, MaxLength } from 'class-validator';
 import { TypeEntity } from '../../type/entities/type.entity';
 
 export class CreateServiceDto {
@@ -25,6 +20,6 @@ export class CreateServiceDto {
 
   @ApiProperty({ default: 1 })
   @IsNotEmpty()
-  @IsInt()
+  // @IsInt()
   type: TypeEntity;
 }

@@ -41,7 +41,8 @@ export class ClientService {
     return `This action updates a #${id} client`;
   }
 
-  remove(id: number) {
+  async remove(id: string) {
+    await this.clientRepository.softDelete(id);
     return `This action removes a #${id} client`;
   }
 
